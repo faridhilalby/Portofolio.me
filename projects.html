@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Faridh Hilalby - Projects Showcase</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS v3 with Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration matching Design System -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "tertiary-container": "#c7cff4",
+            "on-primary-fixed-variant": "#004f58",
+            "inverse-primary": "#006875",
+            "on-error": "#690005",
+            "error": "#ffb4ab",
+            "outline-variant": "#3b494c",
+            "on-primary-container": "#00626e",
+            "on-secondary-fixed": "#021d35",
+            "inverse-on-surface": "#282f49",
+            "secondary": "#b2c8e8",
+            "tertiary": "#e9ecff",
+            "on-background": "#dbe1ff",
+            "tertiary-fixed-dim": "#bdc5e9",
+            "surface": "#0a122a",
+            "on-secondary-container": "#a0b7d6",
+            "on-primary": "#00363d",
+            "primary-fixed": "#9cf0ff",
+            "error-container": "#93000a",
+            "surface-container": "#171e37",
+            "tertiary-fixed": "#dbe1ff",
+            "secondary-fixed": "#d2e4ff",
+            "on-surface-variant": "#bac9cc",
+            "secondary-fixed-dim": "#b2c8e8",
+            "surface-container-lowest": "#050d25",
+            "primary": "#c3f5ff",
+            "secondary-container": "#324863",
+            "primary-container": "#00e5ff",
+            "surface-dim": "#0a122a",
+            "on-tertiary-container": "#4f5877",
+            "surface-bright": "#313852",
+            "surface-container-low": "#131a33",
+            "on-tertiary": "#262f4c",
+            "on-primary-fixed": "#001f24",
+            "on-secondary-fixed-variant": "#324863",
+            "on-tertiary-fixed-variant": "#3d4664",
+            "on-surface": "#dbe1ff",
+            "outline": "#849396",
+            "inverse-surface": "#dbe1ff",
+            "on-tertiary-fixed": "#111a36",
+            "on-secondary": "#1b324b",
+            "surface-container-highest": "#2c344d",
+            "on-error-container": "#ffdad6",
+            "background": "#0a122a",
+            "surface-container-high": "#212942",
+            "surface-variant": "#2c344d",
+            "surface-tint": "#00daf3",
+            "primary-fixed-dim": "#00daf3"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "fontFamily": {
+            "headline-md": ["Plus Jakarta Sans"],
+            "headline-xl": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "body-md": ["Inter"],
+            "body-sm": ["Inter"],
+            "label-md": ["Inter"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "body-lg": ["Inter"],
+            "label-sm": ["Inter"]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    body {
+      background-color: #0a122a;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .bg-dot-pattern {
+      background-image: radial-gradient(rgba(186, 201, 204, 0.1) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+    .glass-pill {
+      background: rgba(19, 26, 51, 0.75);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(132, 147, 150, 0.25);
+    }
+    .project-card {
+      background: rgba(23, 30, 55, 0.65);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(59, 73, 76, 0.5);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .project-card:hover {
+      border-color: rgba(0, 229, 255, 0.6);
+      box-shadow: 0 10px 30px -10px rgba(0, 229, 255, 0.25);
+      transform: translateY(-4px);
+    }
+    .project-card:hover .action-circle {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px rgba(0, 229, 255, 0.8);
+    }
+    .project-card[hidden] {
+      display: none !important;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface bg-dot-pattern min-h-screen relative antialiased selection:bg-primary-container selection:text-surface">
+
+<!-- Header Floating Capsule (Disesuaikan Presisi max-w-6xl) -->
+<header class="fixed top-0 left-4 right-4 z-50 flex justify-between items-center px-7 py-3 max-w-6xl mx-auto rounded-full mt-4 bg-[#0a122a]/85 backdrop-blur-md border border-[#3b494c]/40 shadow-xl">
+  <!-- Brand Logo & Name -->
+  <a class="flex items-center gap-3 group" href="index.html">
+    <div class="w-9 h-9 rounded-full bg-transparent border border-[#00e5ff]/60 flex items-center justify-center shadow-[0_0_10px_rgba(0,229,255,0.3)] transition-transform duration-300 group-hover:scale-105">
+      <span class="text-[#00e5ff] font-headline-sm text-xs font-bold tracking-tight">FH</span>
+    </div>
+    <span class="text-sm font-bold text-white tracking-tight">Faridh Hilalby</span>
+  </a>
+
+  <!-- Navigation Links -->
+  <nav class="hidden md:flex items-center gap-7">
+    <a class="text-xs font-medium text-[#bac9cc] hover:text-white transition-colors duration-200" href="index.html">About</a>
+    <a class="text-xs font-medium text-[#bac9cc] hover:text-white transition-colors duration-200" href="education.html">Education</a>
+    <a class="text-xs font-medium text-[#bac9cc] hover:text-white transition-colors duration-200" href="experience.html">Experience</a>
+    <a class="px-5 py-2 rounded-full text-xs font-medium bg-[#17223b] text-[#00e5ff] border border-[#3b494c]/50 shadow-sm" href="projects.html">Projects</a>
+  </nav>
+
+  <!-- Right Contact Button -->
+  <div class="flex items-center">
+    <a class="px-6 py-2.5 rounded-full bg-[#00e5ff] text-[#0a122a] text-xs font-extrabold tracking-wider shadow-[0_0_15px_rgba(0,229,255,0.6)] hover:shadow-[0_0_22px_rgba(0,229,255,0.85)] active:scale-95 transition-all duration-200 uppercase" href="contact.html">
+      CONTACT
+    </a>
+  </div>
+</header>
+
+<!-- Main Canvas Container -->
+<main class="max-w-6xl mx-auto px-4 md:px-6 pt-32 pb-24">
+  <section class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12">
+    <div class="space-y-2 max-w-xl">
+      <!-- Judul My Projects dibuat BOLD & LEBIH TEBAL -->
+      <h1 class="text-3xl md:text-4xl font-extrabold font-headline-lg text-white tracking-tight">My Projects</h1>
+      <p class="text-body-md font-body-md text-on-surface-variant leading-relaxed">
+        Explore my work in video editing, graphic design, and multimedia production.
+      </p>
+    </div>
+    <!-- Filter Tabs Capsule -->
+    <div class="glass-pill p-1.5 rounded-full flex flex-wrap sm:flex-nowrap items-center gap-1 self-start lg:self-auto shadow-inner border border-outline-variant/40">
+      <button type="button" class="filter-btn px-5 py-2 rounded-full text-label-md font-label-md bg-primary-container text-surface font-bold shadow-[0_0_14px_rgba(0,229,255,0.4)] whitespace-nowrap active:scale-95 transition-transform duration-150 cursor-pointer" data-filter="video-editing">
+        Video Editing &amp; Video Talent
+      </button>
+      <button type="button" class="filter-btn px-4 py-2 rounded-full text-label-md font-label-md text-on-surface-variant hover:text-on-surface transition-colors duration-200 whitespace-nowrap cursor-pointer" data-filter="graphic-design">
+        Desain Grafis
+      </button>
+      <button type="button" class="filter-btn px-4 py-2 rounded-full text-label-md font-label-md text-on-surface-variant hover:text-on-surface transition-colors duration-200 whitespace-nowrap cursor-pointer" data-filter="internship">
+        Internship
+      </button>
+    </div>
+  </section>
+
+  <!-- Projects Grid -->
+  <section id="projectGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    <!-- ==================== 1. VIDEO EDITING & VIDEO TALENT (7 Items) ==================== -->
+    <article class="project-card rounded-xl overflow-hidden flex flex-col group" data-category="video-editing" data-title="Waspada Online" data-description="Editing news videos for Waspada Online's social media platforms." data-video="videos/waspada-online%201.mp4">
+      <div class="relative w-full aspect-[16/10] overflow-hidden bg-surface-container-lowest cursor-pointer" data-preview>
+        <video class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="videos/waspada-online%201.mp4#t=0.1" preload="metadata" muted playsinline></video>
+        <div class="absolute inset-0 bg-gradient-to-t from-surface-container-low/95 via-transparent to-transparent"></div>
+        <div class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-md border border-primary-container/40">
+          <span class="text-[9px] font-label-sm text-primary-container tracking-wider font-bold uppercase">Video Editing</span>
+        </div>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="action-circle w-11 h-11 rounded-full bg-primary-container text-surface flex items-center justify-center shadow-lg transition-all duration-300">
+            <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+          </div>
+        </div>
+      </div>
+      <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+        <div class="space-y-1.5">
+          <h3 class="text-headline-sm font-headline-sm text-on-surface group-hover:text-primary transition-colors">Waspada Online</h3>
+          <p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-2">Editing news videos for Waspada Online's social media platforms.</p>
+        </div>
+        <div>
+          <span class="inline-block px-2.5 py-1 text-[10px] font-semibold text-on-surface-variant bg-surface-container-low rounded border border-outline-variant/40">CapCut</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="project-card rounded-xl overflow-hidden flex flex-col group" data-category="video-editing" data-title="Waspada Online" data-description="Editing news videos for Waspada Online's social media platforms." data-video="videos/waspada-online%202.mp4">
+      <div class="relative w-full aspect-[16/10] overflow-hidden bg-surface-container-lowest cursor-pointer" data-preview>
+        <video class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="videos/waspada-online%202.mp4#t=0.1" preload="metadata" muted playsinline></video>
+        <div class="absolute inset-0 bg-gradient-to-t from-surface-container-low/95 via-transparent to-transparent"></div>
+        <div class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-md border border-primary-container/40">
+          <span class="text-[9px] font-label-sm text-primary-container tracking-wider font-bold uppercase">Video Editing</span>
+        </div>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="action-circle w-11 h-11 rounded-full bg-primary-container text-surface flex items-center justify-center shadow-lg transition-all duration-300">
+            <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+          </div>
+        </div>
+      </div>
+      <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+        <div class="space-y-1.5">
+          <h3 class="text-headline-sm font-headline-sm text-on-surface group-hover:text-primary transition-colors">Waspada Online</h3>
+          <p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-2">Editing news videos for Waspada Online's social media platforms.</p>
+        </div>
+        <div>
+          <span class="inline-block px-2.5 py-1 text-[10px] font-semibold text-on-surface-variant bg-surface-container-low rounded border border-outline-variant/40">CapCut</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="project-card rounded-xl overflow-hidden flex flex-col group" data-category="video-editing" data-title="Waspada Online" data-description="Editing a vlog video documenting a visit to the Indonesian Plantation Museum..." data-video="videos/waspada-online%203.mp4">
+      <div class="relative w-full aspect-[16/10] overflow-hidden bg-surface-container-lowest cursor-pointer" data-preview>
+        <video class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="videos/waspada-online%203.mp4#t=0.1" preload="metadata" muted playsinline></video>
+        <div class="absolute inset-0 bg-gradient-to-t from-surface-container-low/95 via-transparent to-transparent"></div>
+        <div class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-md border border-primary-container/40">
+          <span class="text-[9px] font-label-sm text-primary-container tracking-wider font-bold uppercase">Video Editing</span>
+        </div>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="action-circle w-11 h-11 rounded-full bg-primary-container text-surface flex items-center justify-center shadow-lg transition-all duration-300">
+            <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+          </div>
+        </div>
+      </div>
+      <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+        <div class="space-y-1.5">
+          <h3 class="text-headline-sm font-headline-sm text-on-surface group-hover:text-primary transition-colors">Waspada Online</h3>
+          <p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-2">Editing a vlog video documenting a visit to the Indonesian Plantation Museum...</p>
+        </div>
+        <div>
+          <span class="inline-block px-2.5 py-1 text-[10px] font-semibold text-on-surface-variant bg-surface-container-low rounded border border-outline-variant/40">CapCut</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="project-card rounded-xl overflow-hidden flex flex-col group" data-category="video-editing" data-title="Waspada Online" data-description="Video celebrating Waspada Online's 28th Anniversary." data-video="videos/waspada-online%204.mp4">
+      <div class="relative w-full aspect-[16/10] overflow-hidden bg-surface-container-lowest cursor-pointer" data-preview>
+        <video class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="videos/waspada-online%204.mp4#t=0.1" preload="metadata" muted playsinline></video>
+        <div class="absolute inset-0 bg-gradient-to-t from-surface-container-low/95 via-transparent to-transparent"></div>
+        <div class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-md border border-primary-container/40">
+          <span class="text-[9px] font-label-sm text-primary-container tracking-wider font-bold uppercase">Video Editing</span>
+        </div>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="action-circle w-11 h-11 rounded-full bg-primary-container text-surface flex items-center justify-center shadow-lg transition-all duration-300">
+            <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+          </div>
+        </div>
+      </div>
+      <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+        <div class="space-y-1.5">
+          <h3 class="text-headline-sm font-headline-sm text-on-surface group-hover:text-primary transition-colors">Waspada Online</h3>
+          <p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-2">Video celebrating Waspada Online's 28th Anniversary.</p>
+        </div>
+        <div>
+          <span class="inline-block px-2.5 py-1 text-[10px] font-semibold text-on-surface-variant bg-surface-container-low rounded border border-outline-variant/40">CapCut</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="project-card rounded-xl overflow-hidden flex flex-col group" data-category="video-editing" data-title="Bijeh Kupie Premium" data-description="Worked as a promotional and social media video talent." data-video="videos/Bidjeh%205.mp4">
+      <div class="relative w-full aspect-[16/10] overflow-hidden bg-surface-container-lowest cursor-pointer" data-preview>
+        <video class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="videos/Bidjeh%205.mp4#t=0.1" preload="metadata" muted playsinline></video>
+        <div class="absolute inset-0 bg-gradient-to-t from-surface-container-low/95 via-transparent to-transparent"></div>
+        <div class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-md border border-primary-container/40">
+          <span class="text-[9px] font-label-sm text-primary-container tracking-wider font-bold uppercase">Video Talent</span>
+        </div>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="action-circle w-11 h-11 rounded-full bg-primary-container text-surface flex items-center justify-center shadow-lg transition-all duration-300">
+            <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+          </div>
+        </div>
+      </div>
+      <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+        <div class="space-y-1.5">
+          <h3 class="text-headline-sm font-headline-sm text-on-surface group-hover:text-primary transition-colors">Bijeh Kupie Premium</h3>
+          <p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-2">Worked as a promotional and social media video talent.</p>
+        </div>
+        <div>
+          <span class="inline-block px-2.5 py-1 text-[10px] font-semibold text-on-surface-variant bg-surface-container-low rounded border border-outline-variant/40">CapCut</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="project-card rounded-xl overflow-hidden flex flex-col group" data-category="video-editing" data-title="Bijeh Kupie Premium" data-description="Worked as a promotional and social media video talent." data-video="videos/Bidjeh%206.mp4">
+      <div class="relative w-full aspect-[16/10] overflow-hidden bg-surface-container-lowest cursor-pointer" data-preview>
+        <video class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="videos/Bidjeh%206.mp4#t=0.1" preload="metadata" muted playsinline></video>
+        <div class="absolute inset-0 bg-gradient-to-t from-surface-container-low/95 via-transparent to-transparent"></div>
+        <div class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-md border border-primary-container/40">
+          <span class="text-[9px] font-label-sm text-primary-container tracking-wider font-bold uppercase">Video Talent</span>
+        </div>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="action-circle w-11 h-11 rounded-full bg-primary-container text-surface flex items-center justify-center shadow-lg transition-all duration-300">
+            <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+          </div>
+        </div>
+      </div>
+      <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+        <div class="space-y-1.5">
+          <h3 class="text-headline-sm font-headline-sm text-on-surface group-hover:text-primary transition-colors">Bijeh Kupie Premium</h3>
+          <p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-2">Worked as a promotional and social media video talent.</p>
+        </div>
+        <div>
+          <span class="inline-block px-2.5 py-1 text-[10px] font-semibold text-on-surface-variant bg-surface-container-low rounded border border-outline-variant/40">CapCut</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="project-card rounded-xl overflow-hidden flex flex-col group" data-category="video-editing" data-title="Bijeh Kupie Premium" data-description="Worked as a promotional and social media video talent." data-video="videos/Bidjeh%207.mp4">
+      <div class="relative w-full aspect-[16/10] overflow-hidden bg-surface-container-lowest cursor-pointer" data-preview>
+        <video class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="videos/Bidjeh%207.mp4#t=0.1" preload="metadata" muted playsinline></video>
+        <div class="absolute inset-0 bg-gradient-to-t from-surface-container-low/95 via-transparent to-transparent"></div>
+        <div class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-md border border-primary-container/40">
+          <span class="text-[9px] font-label-sm text-primary-container tracking-wider font-bold uppercase">Video Talent</span>
+        </div>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="action-circle w-11 h-11 rounded-full bg-primary-container text-surface flex items-center justify-center shadow-lg transition-all duration-300">
+            <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+          </div>
+        </div>
+      </div>
+      <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+        <div class="space-y-1.5">
+          <h3 class="text-headline-sm font-headline-sm text-on-surface group-hover:text-primary transition-colors">Bijeh Kupie Premium</h3>
+          <p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-2">Worked as a promotional and social media video talent.</p>
+        </div>
+        <div>
+          <span class="inline-block px-2.5 py-1 text-[10px] font-semibold text-on-surface-variant bg-surface-container-low rounded border border-outline-variant/40">CapCut</span>
+        </div>
+      </div>
+    </article>
+
+
+    <!-- ==================== 2. DESAIN GRAFIS (6 Items - Canva Semua) ==================== -->
+    <article class="project-card rounded-xl overflow-hidden flex flex-col group" data-category="graphic-design" data-title="Waspada Online" data-description="Inauguration Greeting Design for North Labuhanbatu Leaders" hidden>
+      <div class="relative w-full aspect-[16/10] overflow-hidden bg-surface-container-lowest cursor-pointer" data-preview>
+        <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="images/imagesdesain-1.png" alt="Desain 1">
+        <div class="absolute inset-0 bg-gradient-to-t from-surface-container-low/95 via-transparent to-transparent"></div>
+        <div class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-md border border-primary-container/40">
+          <span class="text-[9px] font-label-sm text-primary-container tracking-wider font-bold uppercase">Desain Grafis</span>
+        </div>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="action-circle w-11 h-11 rounded-full bg-primary-container text-surface flex items-center justify-center shadow-lg transition-all duration-300">
+            <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">visibility</span>
+          </div>
+        </div>
+      </div>
+      <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+        <div class="space-y-1.5">
+          <h3 class="text-headline-sm font-headline-sm text-on-surface group-hover:text-primary transition-colors">Waspada Online</h3>
+          <p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-2">Inauguration Greeting Design for North Labuhanbatu Leaders</p>
+        </div>
+        <div>
+          <span class="inline-block px-2.5 py-1 text-[10px] font-semibold text-on-surface-variant bg-surface-container-low rounded border border-outline-variant/40">Canva</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="project-card rounded-xl overflow-hidden flex flex-col group" data-category="graphic-design" data-title="Waspada Online" data-description="Inauguration Greeting Design for North Labuhanbatu Leaders" hidden>
+      <div class="relative w-full aspect-[16/10] overflow-hidden bg-surface-container-lowest cursor-pointer" data-preview>
+        <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="images/imagesdesain-2.png" alt="Desain 2">
+        <div class="absolute inset-0 bg-gradient-to-t from-surface-container-low/95 via-transparent to-transparent"></div>
+        <div class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-md border border-primary-container/40">
+          <span class="text-[9px] font-label-sm text-primary-container tracking-wider font-bold uppercase">Desain Grafis</span>
+        </div>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="action-circle w-11 h-11 rounded-full bg-primary-container text-surface flex items-center justify-center shadow-lg transition-all duration-300">
+            <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">visibility</span>
+          </div>
+        </div>
+      </div>
+      <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+        <div class="space-y-1.5">
+          <h3 class="text-headline-sm font-headline-sm text-on-surface group-hover:text-primary transition-colors">Waspada Online</h3>
+          <p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-2">Inauguration Greeting Design for North Labuhanbatu Leaders</p>
+        </div>
+        <div>
+          <span class="inline-block px-2.5 py-1 text-[10px] font-semibold text-on-surface-variant bg-surface-container-low rounded border border-outline-variant/40">Canva</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="project-card rounded-xl overflow-hidden flex flex-col group" data-category="graphic-design" data-title="Waspada Online" data-description="Inauguration Greeting Design for Samosir Leaders" hidden>
+      <div class="relative w-full aspect-[16/10] overflow-hidden bg-surface-container-lowest cursor-pointer" data-preview>
+        <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="images/imagesdesain-3.png" alt="Desain 3">
+        <div class="absolute inset-0 bg-gradient-to-t from-surface-container-low/95 via-transparent to-transparent"></div>
+        <div class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-md border border-primary-container/40">
+          <span class="text-[9px] font-label-sm text-primary-container tracking-wider font-bold uppercase">Desain Grafis</span>
+        </div>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="action-circle w-11 h-11 rounded-full bg-primary-container text-surface flex items-center justify-center shadow-lg transition-all duration-300">
+            <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">visibility</span>
+          </div>
+        </div>
+      </div>
+      <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+        <div class="space-y-1.5">
+          <h3 class="text-headline-sm font-headline-sm text-on-surface group-hover:text-primary transition-colors">Waspada Online</h3>
+          <p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-2">Inauguration Greeting Design for Samosir Leaders</p>
+        </div>
+        <div>
+          <span class="inline-block px-2.5 py-1 text-[10px] font-semibold text-on-surface-variant bg-surface-container-low rounded border border-outline-variant/40">Canva</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="project-card rounded-xl overflow-hidden flex flex-col group" data-category="graphic-design" data-title="Waspada Online" data-description="Design of the Medan Imsakiyah Schedule" hidden>
+      <div class="relative w-full aspect-[16/10] overflow-hidden bg-surface-container-lowest cursor-pointer" data-preview>
+        <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="images/imagesdesain-4.png" alt="Desain 4">
+        <div class="absolute inset-0 bg-gradient-to-t from-surface-container-low/95 via-transparent to-transparent"></div>
+        <div class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-md border border-primary-container/40">
+          <span class="text-[9px] font-label-sm text-primary-container tracking-wider font-bold uppercase">Desain Grafis</span>
+        </div>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="action-circle w-11 h-11 rounded-full bg-primary-container text-surface flex items-center justify-center shadow-lg transition-all duration-300">
+            <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">visibility</span>
+          </div>
+        </div>
+      </div>
+      <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+        <div class="space-y-1.5">
+          <h3 class="text-headline-sm font-headline-sm text-on-surface group-hover:text-primary transition-colors">Waspada Online</h3>
+          <p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-2">Design of the Medan Imsakiyah Schedule</p>
+        </div>
+        <div>
+          <span class="inline-block px-2.5 py-1 text-[10px] font-semibold text-on-surface-variant bg-surface-container-low rounded border border-outline-variant/40">Canva</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="project-card rounded-xl overflow-hidden flex flex-col group" data-category="graphic-design" data-title="Waspada Online" data-description="Design of the Medan Imsakiyah Schedule" hidden>
+      <div class="relative w-full aspect-[16/10] overflow-hidden bg-surface-container-lowest cursor-pointer" data-preview>
+        <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="images/imagesdesain-5.jpg" alt="Desain 5">
+        <div class="absolute inset-0 bg-gradient-to-t from-surface-container-low/95 via-transparent to-transparent"></div>
+        <div class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-md border border-primary-container/40">
+          <span class="text-[9px] font-label-sm text-primary-container tracking-wider font-bold uppercase">Desain Grafis</span>
+        </div>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="action-circle w-11 h-11 rounded-full bg-primary-container text-surface flex items-center justify-center shadow-lg transition-all duration-300">
+            <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">visibility</span>
+          </div>
+        </div>
+      </div>
+      <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+        <div class="space-y-1.5">
+          <h3 class="text-headline-sm font-headline-sm text-on-surface group-hover:text-primary transition-colors">Waspada Online</h3>
+          <p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-2">Design of the Medan Imsakiyah Schedule</p>
+        </div>
+        <div>
+          <span class="inline-block px-2.5 py-1 text-[10px] font-semibold text-on-surface-variant bg-surface-container-low rounded border border-outline-variant/40">Canva</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="project-card rounded-xl overflow-hidden flex flex-col group" data-category="graphic-design" data-title="Waspada Online" data-description="News Supporting Illustration" hidden>
+      <div class="relative w-full aspect-[16/10] overflow-hidden bg-surface-container-lowest cursor-pointer" data-preview>
+        <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="images/imagesdesain-6.png" alt="Desain 6">
+        <div class="absolute inset-0 bg-gradient-to-t from-surface-container-low/95 via-transparent to-transparent"></div>
+        <div class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-md border border-primary-container/40">
+          <span class="text-[9px] font-label-sm text-primary-container tracking-wider font-bold uppercase">Desain Grafis</span>
+        </div>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="action-circle w-11 h-11 rounded-full bg-primary-container text-surface flex items-center justify-center shadow-lg transition-all duration-300">
+            <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">visibility</span>
+          </div>
+        </div>
+      </div>
+      <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+        <div class="space-y-1.5">
+          <h3 class="text-headline-sm font-headline-sm text-on-surface group-hover:text-primary transition-colors">Waspada Online</h3>
+          <p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-2">News Supporting Illustration</p>
+        </div>
+        <div>
+          <span class="inline-block px-2.5 py-1 text-[10px] font-semibold text-on-surface-variant bg-surface-container-low rounded border border-outline-variant/40">Canva</span>
+        </div>
+      </div>
+    </article>
+
+
+    <!-- ==================== 3. INTERNSHIP (7 Items) ==================== -->
+    <article class="project-card rounded-xl overflow-hidden flex flex-col group" data-category="internship" data-title="Waspada Online" data-description="Camera Setup for Video Shooting" hidden>
+      <div class="relative w-full aspect-[16/10] overflow-hidden bg-surface-container-lowest cursor-pointer" data-preview>
+        <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="Intership/magang-1.jpg" alt="Magang 1">
+        <div class="absolute inset-0 bg-gradient-to-t from-surface-container-low/95 via-transparent to-transparent"></div>
+        <div class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-md border border-primary-container/40">
+          <span class="text-[9px] font-label-sm text-primary-container tracking-wider font-bold uppercase">Internship</span>
+        </div>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="action-circle w-11 h-11 rounded-full bg-primary-container text-surface flex items-center justify-center shadow-lg transition-all duration-300">
+            <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">visibility</span>
+          </div>
+        </div>
+      </div>
+      <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+        <div class="space-y-1.5">
+          <h3 class="text-headline-sm font-headline-sm text-on-surface group-hover:text-primary transition-colors">Waspada Online</h3>
+          <p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-2">Camera Setup for Video Shooting</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="project-card rounded-xl overflow-hidden flex flex-col group" data-category="internship" data-title="Waspada Online" data-description="News Video Recording for Social Media" hidden>
+      <div class="relative w-full aspect-[16/10] overflow-hidden bg-surface-container-lowest cursor-pointer" data-preview>
+        <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="Intership/magang-2.jpg" alt="Magang 2">
+        <div class="absolute inset-0 bg-gradient-to-t from-surface-container-low/95 via-transparent to-transparent"></div>
+        <div class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-md border border-primary-container/40">
+          <span class="text-[9px] font-label-sm text-primary-container tracking-wider font-bold uppercase">Internship</span>
+        </div>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="action-circle w-11 h-11 rounded-full bg-primary-container text-surface flex items-center justify-center shadow-lg transition-all duration-300">
+            <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">visibility</span>
+          </div>
+        </div>
+      </div>
+      <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+        <div class="space-y-1.5">
+          <h3 class="text-headline-sm font-headline-sm text-on-surface group-hover:text-primary transition-colors">Waspada Online</h3>
+          <p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-2">News Video Recording for Social Media</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="project-card rounded-xl overflow-hidden flex flex-col group" data-category="internship" data-title="Waspada Online" data-description="News Video Recording for Social Media" hidden>
+      <div class="relative w-full aspect-[16/10] overflow-hidden bg-surface-container-lowest cursor-pointer" data-preview>
+        <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="Intership/magang-3.jpg" alt="Magang 3">
+        <div class="absolute inset-0 bg-gradient-to-t from-surface-container-low/95 via-transparent to-transparent"></div>
+        <div class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-md border border-primary-container/40">
+          <span class="text-[9px] font-label-sm text-primary-container tracking-wider font-bold uppercase">Internship</span>
+        </div>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="action-circle w-11 h-11 rounded-full bg-primary-container text-surface flex items-center justify-center shadow-lg transition-all duration-300">
+            <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">visibility</span>
+          </div>
+        </div>
+      </div>
+      <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+        <div class="space-y-1.5">
+          <h3 class="text-headline-sm font-headline-sm text-on-surface group-hover:text-primary transition-colors">Waspada Online</h3>
+          <p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-2">News Video Recording for Social Media</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="project-card rounded-xl overflow-hidden flex flex-col group" data-category="internship" data-title="Waspada Online" data-description="News Video Editing for Social Media" hidden>
+      <div class="relative w-full aspect-[16/10] overflow-hidden bg-surface-container-lowest cursor-pointer" data-preview>
+        <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="Intership/magang-4.jpg" alt="Magang 4">
+        <div class="absolute inset-0 bg-gradient-to-t from-surface-container-low/95 via-transparent to-transparent"></div>
+        <div class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-md border border-primary-container/40">
+          <span class="text-[9px] font-label-sm text-primary-container tracking-wider font-bold uppercase">Internship</span>
+        </div>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="action-circle w-11 h-11 rounded-full bg-primary-container text-surface flex items-center justify-center shadow-lg transition-all duration-300">
+            <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">visibility</span>
+          </div>
+        </div>
+      </div>
+      <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+        <div class="space-y-1.5">
+          <h3 class="text-headline-sm font-headline-sm text-on-surface group-hover:text-primary transition-colors">Waspada Online</h3>
+          <p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-2">News Video Editing for Social Media</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="project-card rounded-xl overflow-hidden flex flex-col group" data-category="internship" data-title="Waspada Online" data-description="Attending the “Dibalik Foto Jurnalis Juara” Seminar" hidden>
+      <div class="relative w-full aspect-[16/10] overflow-hidden bg-surface-container-lowest cursor-pointer" data-preview>
+        <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="Intership/magang-5.jpg" alt="Magang 5">
+        <div class="absolute inset-0 bg-gradient-to-t from-surface-container-low/95 via-transparent to-transparent"></div>
+        <div class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-md border border-primary-container/40">
+          <span class="text-[9px] font-label-sm text-primary-container tracking-wider font-bold uppercase">Internship</span>
+        </div>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="action-circle w-11 h-11 rounded-full bg-primary-container text-surface flex items-center justify-center shadow-lg transition-all duration-300">
+            <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">visibility</span>
+          </div>
+        </div>
+      </div>
+      <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+        <div class="space-y-1.5">
+          <h3 class="text-headline-sm font-headline-sm text-on-surface group-hover:text-primary transition-colors">Waspada Online</h3>
+          <p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-2">Attending the “Dibalik Foto Jurnalis Juara” Seminar</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="project-card rounded-xl overflow-hidden flex flex-col group" data-category="internship" data-title="Waspada Online" data-description="Documented the STIK-P Medan Final Examination" hidden>
+      <div class="relative w-full aspect-[16/10] overflow-hidden bg-surface-container-lowest cursor-pointer" data-preview>
+        <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="Intership/magang-6.jpg" alt="Magang 6">
+        <div class="absolute inset-0 bg-gradient-to-t from-surface-container-low/95 via-transparent to-transparent"></div>
+        <div class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-md border border-primary-container/40">
+          <span class="text-[9px] font-label-sm text-primary-container tracking-wider font-bold uppercase">Internship</span>
+        </div>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="action-circle w-11 h-11 rounded-full bg-primary-container text-surface flex items-center justify-center shadow-lg transition-all duration-300">
+            <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">visibility</span>
+          </div>
+        </div>
+      </div>
+      <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+        <div class="space-y-1.5">
+          <h3 class="text-headline-sm font-headline-sm text-on-surface group-hover:text-primary transition-colors">Waspada Online</h3>
+          <p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-2">Documented the STIK-P Medan Final Examination</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="project-card rounded-xl overflow-hidden flex flex-col group" data-category="internship" data-title="Waspada Online" data-description="Press Conference Documentation for Company Archives" hidden>
+      <div class="relative w-full aspect-[16/10] overflow-hidden bg-surface-container-lowest cursor-pointer" data-preview>
+        <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="Intership/magang-7.jpg" alt="Magang 7">
+        <div class="absolute inset-0 bg-gradient-to-t from-surface-container-low/95 via-transparent to-transparent"></div>
+        <div class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-md border border-primary-container/40">
+          <span class="text-[9px] font-label-sm text-primary-container tracking-wider font-bold uppercase">Internship</span>
+        </div>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="action-circle w-11 h-11 rounded-full bg-primary-container text-surface flex items-center justify-center shadow-lg transition-all duration-300">
+            <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">visibility</span>
+          </div>
+        </div>
+      </div>
+      <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+        <div class="space-y-1.5">
+          <h3 class="text-headline-sm font-headline-sm text-on-surface group-hover:text-primary transition-colors">Waspada Online</h3>
+          <p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-2">Press Conference Documentation for Company Archives</p>
+        </div>
+      </div>
+    </article>
+
+  </section>
+</main>
+
+<!-- Modal Preview Pop-up -->
+<div id="previewModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-5 bg-[#030814]/90 backdrop-blur-md">
+  <div class="w-full max-w-3xl overflow-hidden border border-[#33415e] rounded-2xl bg-[#111a33] shadow-2xl">
+    <div class="flex items-center justify-between p-4 border-b border-[#33415e]">
+      <h2 id="modalTitle" class="font-bold text-white text-base">Preview Project</h2>
+      <button type="button" id="closeModal" class="px-3 py-1.5 text-xs text-white bg-[#1a2642] border border-[#35425c] rounded-lg cursor-pointer hover:bg-[#25355c]">Tutup ✕</button>
+    </div>
+    <div class="p-3 bg-[#080f20] flex items-center justify-center">
+      <img id="modalImage" src="" alt="Preview" class="max-h-[65vh] object-contain rounded-lg hidden">
+      <video id="modalVideo" controls class="max-h-[65vh] object-contain rounded-lg hidden"></video>
+    </div>
+    <div class="p-4 border-t border-[#33415e]/50">
+      <p id="modalDescription" class="text-sm text-slate-300"></p>
+    </div>
+  </div>
+</div>
+
+<!-- JavaScript Filter & Modal -->
+<script>
+  // SISTEM FILTER
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const projectCards = document.querySelectorAll(".project-card");
+
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const selectedCategory = button.dataset.filter;
+
+      // Update Tampilan Tombol Filter
+      filterButtons.forEach((btn) => {
+        if (btn === button) {
+          btn.className = "filter-btn px-5 py-2 rounded-full text-label-md font-label-md bg-primary-container text-surface font-bold shadow-[0_0_14px_rgba(0,229,255,0.4)] whitespace-nowrap active:scale-95 transition-transform duration-150 cursor-pointer";
+        } else {
+          btn.className = "filter-btn px-4 py-2 rounded-full text-label-md font-label-md text-on-surface-variant hover:text-on-surface transition-colors duration-200 whitespace-nowrap cursor-pointer";
+        }
+      });
+
+      // Filter Kartu Proyek
+      projectCards.forEach((card) => {
+        if (card.dataset.category === selectedCategory) {
+          card.removeAttribute("hidden");
+        } else {
+          card.setAttribute("hidden", "hidden");
+        }
+      });
+    });
+  });
+
+  // SISTEM MODAL PREVIEW
+  const previewModal = document.getElementById("previewModal");
+  const modalImage = document.getElementById("modalImage");
+  const modalVideo = document.getElementById("modalVideo");
+  const modalTitle = document.getElementById("modalTitle");
+  const modalDescription = document.getElementById("modalDescription");
+  const closeModalButton = document.getElementById("closeModal");
+
+  document.querySelectorAll("[data-preview]").forEach((trigger) => {
+    trigger.addEventListener("click", () => {
+      const card = trigger.closest(".project-card");
+      const title = card.dataset.title;
+      const description = card.dataset.description;
+      const videoSrc = card.dataset.video;
+
+      modalTitle.textContent = title;
+      modalDescription.textContent = description;
+
+      if (videoSrc) {
+        modalImage.classList.add("hidden");
+        modalVideo.classList.remove("hidden");
+        modalVideo.src = videoSrc;
+        modalVideo.play();
+      } else {
+        modalVideo.classList.add("hidden");
+        modalVideo.pause();
+        modalVideo.src = "";
+        modalImage.classList.remove("hidden");
+        const img = card.querySelector("img");
+        if (img) modalImage.src = img.src;
+      }
+
+      previewModal.classList.remove("hidden");
+      previewModal.classList.add("flex");
+      document.body.style.overflow = "hidden";
+    });
+  });
+
+  function closePreview() {
+    previewModal.classList.remove("flex");
+    previewModal.classList.add("hidden");
+    document.body.style.overflow = "";
+    modalImage.src = "";
+    modalVideo.pause();
+    modalVideo.src = "";
+  }
+
+  closeModalButton.addEventListener("click", closePreview);
+  previewModal.addEventListener("click", (e) => {
+    if (e.target === previewModal) closePreview();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !previewModal.classList.contains("hidden")) closePreview();
+  });
+</script>
+
+</body>
+</html>

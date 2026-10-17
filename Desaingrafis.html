@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html class="dark" lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Faridh Hilalby — Graphic Design Showcase</title>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-dim": "#0a122a",
+            "background": "#0a122a",
+            "surface": "#0a122a",
+            "surface-container": "#171e37",
+            "surface-container-low": "#131a33",
+            "primary": "#00e5ff",
+            "on-surface": "#dbe1ff",
+            "on-surface-variant": "#94a3b8"
+          },
+          fontFamily: {
+            sans: ["Plus Jakarta Sans", "Inter", "sans-serif"],
+            headline: ["Plus Jakarta Sans", "sans-serif"]
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #070e22;
+      color: #f8f9fa;
+    }
+    .glass-card {
+      background: rgba(23, 30, 55, 0.7);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(58, 80, 107, 0.35);
+      transition: all 0.25s ease;
+    }
+    .glass-card:hover {
+      border-color: rgba(0, 229, 255, 0.45);
+      box-shadow: 0 0 25px rgba(0, 229, 255, 0.15);
+      transform: translateY(-2px);
+    }
+    .glass-nav {
+      background: rgba(11, 19, 43, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+  </style>
+</head>
+<body class="min-h-screen text-[#F8F9FA] font-sans antialiased selection:bg-[#00E5FF] selection:text-[#0B132B] relative overflow-x-hidden">
+
+  <!-- Floating Capsule Header -->
+  <header class="fixed top-4 left-1/2 -translate-x-1/2 z-50 max-w-4xl w-[92%] rounded-full glass-nav px-6 py-3 flex items-center justify-between shadow-2xl">
+    <div class="flex items-center gap-3">
+      <div class="w-8 h-8 rounded-full bg-[#00E5FF]/20 flex items-center justify-center text-[#00E5FF] font-black text-xs border border-[#00E5FF]/30">FH</div>
+      <span class="font-bold text-sm tracking-wide text-white">Faridh Hilalby</span>
+    </div>
+    
+    <nav class="hidden md:flex items-center gap-1 bg-[#131a33]/80 p-1 rounded-full border border-[#3A506B]/30">
+      <a class="text-xs font-semibold px-4 py-1.5 rounded-full text-[#94A3B8] hover:text-[#00E5FF] transition-colors" href="index.html">About</a>
+      <a class="text-xs font-semibold px-4 py-1.5 rounded-full text-[#94A3B8] hover:text-[#00E5FF] transition-colors" href="education.html">Education</a>
+      <a class="text-xs font-semibold px-4 py-1.5 rounded-full text-[#94A3B8] hover:text-[#00E5FF] transition-colors" href="experience.html">Experience</a>
+      <a class="text-xs font-semibold px-4 py-1.5 rounded-full bg-[#00E5FF]/15 text-[#00E5FF] border border-[#00E5FF]/30 transition-colors" href="projects.html">Projects</a>
+    </nav>
+    
+    <div class="flex items-center">
+      <a class="bg-[#00E5FF] text-[#0B132B] px-5 py-2 rounded-full text-xs font-bold tracking-wider hover:shadow-[0_0_15px_rgba(0,229,255,0.4)] transition-all" href="contact.html">
+        Contact
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Projects Content -->
+  <main class="max-w-6xl mx-auto px-6 pt-32 pb-24 flex flex-col gap-8">
+    
+    <!-- Header Section with Category Filter Tabs -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+      <div class="flex flex-col gap-2">
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-white font-headline tracking-tight">My Projects</h1>
+        <p class="text-[#94A3B8] text-sm sm:text-base max-w-xl leading-relaxed">
+          Explore my work in video editing, graphic design, and multimedia production.
+        </p>
+      </div>
+
+      <!-- Tab Filter Buttons -->
+      <div class="flex items-center gap-1.5 bg-[#131a33] p-1.5 rounded-xl border border-[#3A506B]/40 shrink-0 self-start md:self-auto">
+        <a class="px-4 py-2 rounded-lg text-xs font-bold text-[#94A3B8] hover:text-white transition-colors cursor-pointer" href="projects.html">
+          Video Editing &amp; Video Talent
+        </a>
+        <a class="px-4 py-2 rounded-lg text-xs font-bold bg-[#00E5FF] text-[#0B132B] shadow-[0_0_15px_rgba(0,229,255,0.3)] transition-all cursor-pointer">
+          Desain Grafis
+        </a>
+        <a class="px-4 py-2 rounded-lg text-xs font-bold text-[#94A3B8] hover:text-white transition-colors cursor-pointer" href="projects.html">
+          Internship
+        </a>
+      </div>
+    </div>
+
+    <!-- 6 Graphic Design Cards (Linked to local images folder) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-2">
+      
+      <!-- Card 1 -->
+      <div class="glass-card rounded-2xl overflow-hidden flex flex-col group">
+        <div class="w-full aspect-[16/10] bg-[#101830] relative overflow-hidden">
+          <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" style="background-image: url('images/desain-1.jpg');"></div>
+          <div class="absolute inset-0 bg-[#070e22]/30 group-hover:bg-[#070e22]/10 transition-colors"></div>
+          <span class="absolute top-3 left-3 bg-[#070e22]/85 backdrop-blur-md px-2.5 py-1 rounded text-[10px] font-bold uppercase tracking-wider text-[#00E5FF] border border-[#3A506B]/50">
+            Desain Grafis
+          </span>
+          <div class="absolute inset-0 flex items-center justify-center cursor-pointer" data-preview>
+            <div class="w-12 h-12 rounded-full bg-[#00E5FF] text-[#0B132B] flex items-center justify-center shadow-[0_0_20px_rgba(0,229,255,0.5)] transform group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined text-2xl font-bold">visibility</span>
+            </div>
+          </div>
+        </div>
+        <div class="p-6 flex flex-col gap-3 flex-1 justify-between">
+          <div class="flex flex-col gap-1.5">
+            <h3 class="text-lg font-bold text-white group-hover:text-[#00E5FF] transition-colors">Waspada Online</h3>
+            <p class="text-xs text-[#94A3B8] leading-relaxed line-clamp-2">Inauguration Greeting Design for North Labuhanbatu Leaders</p>
+          </div>
+          <div class="pt-3 border-t border-[#3A506B]/30 flex items-center gap-2">
+            <span class="text-[10px] bg-[#101830] text-[#94A3B8] font-semibold px-2.5 py-1 rounded-md border border-[#3A506B]/40">Canva</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="glass-card rounded-2xl overflow-hidden flex flex-col group">
+        <div class="w-full aspect-[16/10] bg-[#101830] relative overflow-hidden">
+          <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" style="background-image: url('images/desain-2.jpg');"></div>
+          <div class="absolute inset-0 bg-[#070e22]/30 group-hover:bg-[#070e22]/10 transition-colors"></div>
+          <span class="absolute top-3 left-3 bg-[#070e22]/85 backdrop-blur-md px-2.5 py-1 rounded text-[10px] font-bold uppercase tracking-wider text-[#00E5FF] border border-[#3A506B]/50">
+            Desain Grafis
+          </span>
+          <div class="absolute inset-0 flex items-center justify-center cursor-pointer" data-preview>
+            <div class="w-12 h-12 rounded-full bg-[#00E5FF] text-[#0B132B] flex items-center justify-center shadow-[0_0_20px_rgba(0,229,255,0.5)] transform group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined text-2xl font-bold">visibility</span>
+            </div>
+          </div>
+        </div>
+        <div class="p-6 flex flex-col gap-3 flex-1 justify-between">
+          <div class="flex flex-col gap-1.5">
+            <h3 class="text-lg font-bold text-white group-hover:text-[#00E5FF] transition-colors">Waspada Online</h3>
+            <p class="text-xs text-[#94A3B8] leading-relaxed line-clamp-2">Inauguration Greeting Design for North Labuhanbatu Leaders</p>
+          </div>
+          <div class="pt-3 border-t border-[#3A506B]/30 flex items-center gap-2">
+            <span class="text-[10px] bg-[#101830] text-[#94A3B8] font-semibold px-2.5 py-1 rounded-md border border-[#3A506B]/40">Canva</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="glass-card rounded-2xl overflow-hidden flex flex-col group">
+        <div class="w-full aspect-[16/10] bg-[#101830] relative overflow-hidden">
+          <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" style="background-image: url('images/desain-3.jpg');"></div>
+          <div class="absolute inset-0 bg-[#070e22]/30 group-hover:bg-[#070e22]/10 transition-colors"></div>
+          <span class="absolute top-3 left-3 bg-[#070e22]/85 backdrop-blur-md px-2.5 py-1 rounded text-[10px] font-bold uppercase tracking-wider text-[#00E5FF] border border-[#3A506B]/50">
+            Desain Grafis
+          </span>
+          <div class="absolute inset-0 flex items-center justify-center cursor-pointer" data-preview>
+            <div class="w-12 h-12 rounded-full bg-[#00E5FF] text-[#0B132B] flex items-center justify-center shadow-[0_0_20px_rgba(0,229,255,0.5)] transform group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined text-2xl font-bold">visibility</span>
+            </div>
+          </div>
+        </div>
+        <div class="p-6 flex flex-col gap-3 flex-1 justify-between">
+          <div class="flex flex-col gap-1.5">
+            <h3 class="text-lg font-bold text-white group-hover:text-[#00E5FF] transition-colors">Waspada Online</h3>
+            <p class="text-xs text-[#94A3B8] leading-relaxed line-clamp-2">Inauguration Greeting Design for Samosir Leaders</p>
+          </div>
+          <div class="pt-3 border-t border-[#3A506B]/30 flex items-center gap-2">
+            <span class="text-[10px] bg-[#101830] text-[#94A3B8] font-semibold px-2.5 py-1 rounded-md border border-[#3A506B]/40">Canva</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="glass-card rounded-2xl overflow-hidden flex flex-col group">
+        <div class="w-full aspect-[16/10] bg-[#101830] relative overflow-hidden">
+          <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" style="background-image: url('images/desain-4.jpg');"></div>
+          <div class="absolute inset-0 bg-[#070e22]/30 group-hover:bg-[#070e22]/10 transition-colors"></div>
+          <span class="absolute top-3 left-3 bg-[#070e22]/85 backdrop-blur-md px-2.5 py-1 rounded text-[10px] font-bold uppercase tracking-wider text-[#00E5FF] border border-[#3A506B]/50">
+            Desain Grafis
+          </span>
+          <div class="absolute inset-0 flex items-center justify-center cursor-pointer" data-preview>
+            <div class="w-12 h-12 rounded-full bg-[#00E5FF] text-[#0B132B] flex items-center justify-center shadow-[0_0_20px_rgba(0,229,255,0.5)] transform group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined text-2xl font-bold">visibility</span>
+            </div>
+          </div>
+        </div>
+        <div class="p-6 flex flex-col gap-3 flex-1 justify-between">
+          <div class="flex flex-col gap-1.5">
+            <h3 class="text-lg font-bold text-white group-hover:text-[#00E5FF] transition-colors">Waspada Online</h3>
+            <p class="text-xs text-[#94A3B8] leading-relaxed line-clamp-2">Design of the Medan Imsakiyah Schedule</p>
+          </div>
+          <div class="pt-3 border-t border-[#3A506B]/30 flex items-center gap-2">
+            <span class="text-[10px] bg-[#101830] text-[#94A3B8] font-semibold px-2.5 py-1 rounded-md border border-[#3A506B]/40">Photoshop</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="glass-card rounded-2xl overflow-hidden flex flex-col group">
+        <div class="w-full aspect-[16/10] bg-[#101830] relative overflow-hidden">
+          <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" style="background-image: url('images/desain-5.jpg');"></div>
+          <div class="absolute inset-0 bg-[#070e22]/30 group-hover:bg-[#070e22]/10 transition-colors"></div>
+          <span class="absolute top-3 left-3 bg-[#070e22]/85 backdrop-blur-md px-2.5 py-1 rounded text-[10px] font-bold uppercase tracking-wider text-[#00E5FF] border border-[#3A506B]/50">
+            Desain Grafis
+          </span>
+          <div class="absolute inset-0 flex items-center justify-center cursor-pointer" data-preview>
+            <div class="w-12 h-12 rounded-full bg-[#00E5FF] text-[#0B132B] flex items-center justify-center shadow-[0_0_20px_rgba(0,229,255,0.5)] transform group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined text-2xl font-bold">visibility</span>
+            </div>
+          </div>
+        </div>
+        <div class="p-6 flex flex-col gap-3 flex-1 justify-between">
+          <div class="flex flex-col gap-1.5">
+            <h3 class="text-lg font-bold text-white group-hover:text-[#00E5FF] transition-colors">Waspada Online</h3>
+            <p class="text-xs text-[#94A3B8] leading-relaxed line-clamp-2">Design of the Medan Imsakiyah Schedule</p>
+          </div>
+          <div class="pt-3 border-t border-[#3A506B]/30 flex items-center gap-2">
+            <span class="text-[10px] bg-[#101830] text-[#94A3B8] font-semibold px-2.5 py-1 rounded-md border border-[#3A506B]/40">Illustrator</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="glass-card rounded-2xl overflow-hidden flex flex-col group">
+        <div class="w-full aspect-[16/10] bg-[#101830] relative overflow-hidden">
+          <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" style="background-image: url('images/desain-6.jpg');"></div>
+          <div class="absolute inset-0 bg-[#070e22]/30 group-hover:bg-[#070e22]/10 transition-colors"></div>
+          <span class="absolute top-3 left-3 bg-[#070e22]/85 backdrop-blur-md px-2.5 py-1 rounded text-[10px] font-bold uppercase tracking-wider text-[#00E5FF] border border-[#3A506B]/50">
+            Desain Grafis
+          </span>
+          <div class="absolute inset-0 flex items-center justify-center cursor-pointer" data-preview>
+            <div class="w-12 h-12 rounded-full bg-[#00E5FF] text-[#0B132B] flex items-center justify-center shadow-[0_0_20px_rgba(0,229,255,0.5)] transform group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined text-2xl font-bold">visibility</span>
+            </div>
+          </div>
+        </div>
+        <div class="p-6 flex flex-col gap-3 flex-1 justify-between">
+          <div class="flex flex-col gap-1.5">
+            <h3 class="text-lg font-bold text-white group-hover:text-[#00E5FF] transition-colors">Waspada Online</h3>
+            <p class="text-xs text-[#94A3B8] leading-relaxed line-clamp-2">News Supporting Illustration</p>
+          </div>
+          <div class="pt-3 border-t border-[#3A506B]/30 flex items-center gap-2">
+            <span class="text-[10px] bg-[#101830] text-[#94A3B8] font-semibold px-2.5 py-1 rounded-md border border-[#3A506B]/40">Canva</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Pop-up Modal Preview -->
+  <div id="previewModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-5 bg-[#030814]/90 backdrop-blur-md">
+    <div class="w-full max-w-3xl overflow-hidden border border-[#33415e] rounded-2xl bg-[#111a33] shadow-2xl">
+      <div class="flex items-center justify-between p-4 border-b border-[#33415e]">
+        <h2 id="modalTitle" class="font-bold text-white text-base">Preview Desain</h2>
+        <button type="button" id="closeModal" class="px-3 py-1.5 text-xs text-white bg-[#1a2642] border border-[#35425c] rounded-lg cursor-pointer hover:bg-[#25355c]">Tutup ✕</button>
+      </div>
+      <div class="p-3 bg-[#080f20] flex items-center justify-center">
+        <img id="modalImage" src="" alt="Preview Desain" class="max-h-[65vh] object-contain rounded-lg">
+      </div>
+      <div class="p-4 border-t border-[#33415e]/50">
+        <p id="modalDescription" class="text-sm text-slate-300"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Modal Preview -->
+  <script>
+    const previewModal = document.getElementById("previewModal");
+    const modalImage = document.getElementById("modalImage");
+    const modalTitle = document.getElementById("modalTitle");
+    const modalDescription = document.getElementById("modalDescription");
+    const closeModalButton = document.getElementById("closeModal");
+
+    document.querySelectorAll("[data-preview]").forEach((trigger) => {
+      trigger.addEventListener("click", () => {
+        const card = trigger.closest(".glass-card");
+        const bgStyle = card.querySelector("[style*='background-image']").style.backgroundImage;
+        const imgUrl = bgStyle.slice(5, -2).replace(/['"]/g, "");
+
+        modalTitle.textContent = card.querySelector("h3").textContent;
+        modalDescription.textContent = card.querySelector("p").textContent;
+        modalImage.src = imgUrl;
+
+        previewModal.classList.remove("hidden");
+        previewModal.classList.add("flex");
+        document.body.style.overflow = "hidden";
+      });
+    });
+
+    function closePreview() {
+      previewModal.classList.remove("flex");
+      previewModal.classList.add("hidden");
+      document.body.style.overflow = "";
+      modalImage.src = "";
+    }
+
+    closeModalButton.addEventListener("click", closePreview);
+    previewModal.addEventListener("click", (e) => {
+      if (e.target === previewModal) closePreview();
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closePreview();
+    });
+  </script>
+
+</body>
+</html>
